@@ -29,7 +29,7 @@ class FuncionesEvalTest{
 
     }
 
-/*@Test
+@Test
 void contarApariciones() {
     assertEquals(2, FuncionesEval.contarApariciones(new int[]{1, 2, 3, 1, 4}, 1));
     assertEquals(0, FuncionesEval.contarApariciones(new int[]{5, 6, 7}, 2));
@@ -53,6 +53,5 @@ void testEncontrarMayor() {
     int[] array5 = null;
     assertThrows(IllegalArgumentException.class, () -> FuncionesEval.encontrarMayor(array5));
 }
-*/
 
 }
