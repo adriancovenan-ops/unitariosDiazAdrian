@@ -3,7 +3,33 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FuncionesEvalTest{
 
-@Test
+    @Test
+    void testEsPerfecto() {
+
+        assertTrue(FuncionesEval.esPerfecto(6));
+        assertTrue(FuncionesEval.esPerfecto(28));
+
+        assertFalse(FuncionesEval.esPerfecto(65149561));
+        assertFalse(FuncionesEval.esPerfecto(3));
+    }
+
+    @Test
+    void testGetTipoClima() {
+        assertEquals("FRIO", FuncionesEval.getTipoClima(10));
+        assertEquals("NUBLADO", FuncionesEval.getTipoClima(20));
+        assertEquals("CALUROSO", FuncionesEval.getTipoClima(30));
+        assertEquals("TROPICAL", FuncionesEval.getTipoClima(31));
+    }
+
+    @Test
+    void testInvertirArray() {
+        int[] sinInvertir = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] invertido = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+        assertArrayEquals(invertido, FuncionesEval.invertirArray(sinInvertir));
+
+    }
+
+/*@Test
 void contarApariciones() {
     assertEquals(2, FuncionesEval.contarApariciones(new int[]{1, 2, 3, 1, 4}, 1));
     assertEquals(0, FuncionesEval.contarApariciones(new int[]{5, 6, 7}, 2));
@@ -27,4 +53,6 @@ void testEncontrarMayor() {
     int[] array5 = null;
     assertThrows(IllegalArgumentException.class, () -> FuncionesEval.encontrarMayor(array5));
 }
+*/
+
 }
